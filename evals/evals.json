@@ -1,0 +1,104 @@
+{
+  "skill_name": "impots",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "eval-ir-enfants",
+      "prompt": "J'ai un salaire de 65 000€ nets imposables, je suis marié avec 2 enfants à charge. Mon employeur prélève à la source. Comment calculer mon impôt 2026 et est-ce que les enfants m'aident vraiment ?",
+      "expected_output": "Explication du mécanisme QF (3 parts), barème progressif, plafonnement du gain QF, décote éventuelle. Doit mentionner que les chiffres exacts sont à vérifier sur impots.gouv.fr.",
+      "assertions": [
+        {
+          "id": "ir-1-parts",
+          "description": "Mentionne 3 parts fiscales (2 base mari + 0.5 + 0.5 pour 2 enfants)",
+          "check": "La réponse identifie correctement 3 parts fiscales pour ce foyer"
+        },
+        {
+          "id": "ir-2-plafond-qf",
+          "description": "Explique le plafonnement du gain QF par demi-part",
+          "check": "La réponse mentionne que l'avantage fiscal lié aux enfants est plafonné par demi-part"
+        },
+        {
+          "id": "ir-3-sequence",
+          "description": "Décrit la séquence de calcul RNI → quotient → barème → impôt brut → décote → net",
+          "check": "La réponse expose les étapes du calcul dans le bon ordre"
+        },
+        {
+          "id": "ir-4-pas-de-chiffres-inventés",
+          "description": "Ne donne pas de montant d'impôt précis sans recommander de vérifier le barème actuel",
+          "check": "Si un montant est cité, la réponse précise qu'il faut vérifier les barèmes 2026 sur impots.gouv.fr"
+        },
+        {
+          "id": "ir-5-nuance-enfants",
+          "description": "Répond à 'est-ce que les enfants aident vraiment' avec une nuance (oui mais plafonné)",
+          "check": "La réponse dit que les enfants aident mais que le gain est limité (plafond par demi-part)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "eval-per-arbitrage",
+      "prompt": "Je gagne 90k€/an, TMI à 30%. Mon conseiller me dit de mettre 8 000€ dans un PER. C'est vraiment utile ou c'est juste du report d'imposition ?",
+      "expected_output": "Explication déduction PER, économie immédiate 2400€, discussion honnête du report vs gain selon TMI futur à la retraite. Plafond 10% revenus pro à vérifier.",
+      "assertions": [
+        {
+          "id": "per-1-economie",
+          "description": "Calcule l'économie immédiate : 8 000 × 30% = 2 400€",
+          "check": "La réponse mentionne une économie d'impôt de 2 400€ cette année"
+        },
+        {
+          "id": "per-2-report",
+          "description": "Explique que c'est un report d'imposition, pas une exonération",
+          "check": "La réponse dit clairement que les sommes seront imposées à la sortie (retraite)"
+        },
+        {
+          "id": "per-3-tmi-futur",
+          "description": "Mentionne le TMI futur à la retraite comme variable clé",
+          "check": "La réponse explique que l'avantage dépend du TMI à la retraite (si < 30%, gain net ; si >, perte)"
+        },
+        {
+          "id": "per-4-plafond",
+          "description": "Mentionne le plafond de déduction (10% des revenus professionnels)",
+          "check": "La réponse mentionne qu'il existe un plafond de déduction à vérifier"
+        },
+        {
+          "id": "per-5-nuance",
+          "description": "Nuance la réponse : pas toujours avantageux, dépend de la situation",
+          "check": "La réponse ne dit pas 'oui c'est toujours bien' mais nuance selon TMI futur et horizon"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "eval-freelance-sasu",
+      "prompt": "Je veux passer freelance en SASU. Mon TJM serait 600€/jour, environ 120j/an. Comment comparer la fiscalité avec mon salaire actuel de 70k€ brut ?",
+      "expected_output": "Comparaison IS + dividendes/salaire dirigeant vs IR salarié. Cotisations sociales assimilé-salarié. Arbitrage salaire vs dividendes. Pas de réponse universelle.",
+      "assertions": [
+        {
+          "id": "sasu-1-ca",
+          "description": "Identifie le CA approximatif (600 × 120 = 72 000€ HT)",
+          "check": "La réponse calcule ou mentionne un CA d'environ 72 000€ HT"
+        },
+        {
+          "id": "sasu-2-is",
+          "description": "Explique que la SASU paie l'IS, pas l'IR directement",
+          "check": "La réponse distingue IS (société) et IR (dirigeant) comme deux niveaux de taxation"
+        },
+        {
+          "id": "sasu-3-arbitrage",
+          "description": "Mentionne l'arbitrage salaire vs dividendes pour le dirigeant",
+          "check": "La réponse explique que le dirigeant peut se payer en salaire (déductible IS) ou dividendes (PFU)"
+        },
+        {
+          "id": "sasu-4-cotisations",
+          "description": "Mentionne les cotisations sociales assimilé-salarié en SASU",
+          "check": "La réponse signale que les cotisations sociales du dirigeant SASU sont élevées (assimilé salarié)"
+        },
+        {
+          "id": "sasu-5-pas-universel",
+          "description": "Ne donne pas de réponse universelle 'SASU c'est mieux'",
+          "check": "La réponse souligne que le résultat dépend des choix de rémunération et de la situation personnelle"
+        }
+      ]
+    }
+  ]
+}

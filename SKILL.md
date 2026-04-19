@@ -89,6 +89,29 @@ La déduction PER réduit le RNI de l'année de versement. Mécanisme :
 
 **V_BTPERPTOTV** : variable DGFiP qui représente le plafond disponible. Sans elle, le moteur de calcul annule la déduction — point d'attention si tu travailles avec les sources Mlang.
 
+### Prélèvements sociaux (CSG/CRDS)
+
+Couche distincte de l'IR, prélevée sur la quasi-totalité des revenus du capital et du travail. Taux global à vérifier sur impots.gouv.fr (autour de 17,2% historiquement).
+
+Points clés :
+- S'applique sur dividendes, intérêts, plus-values mobilières et immobilières, revenus fonciers, revenus LMNP
+- La CSG est partiellement déductible du revenu imposable l'année suivante (fraction déductible à vérifier selon le régime)
+- Revenus du capital au PFU : prélèvements sociaux inclus dans le taux global
+- Revenus du capital au barème : prélèvements sociaux séparés de l'IR
+- Plus-values immobilières : exonération PS progressive (grille distincte de l'IR, durée différente)
+- Revenus d'activité (salaires, BNC) : taux différent, prélevé à la source
+
+Toujours distinguer IR et PS dans une simulation — confondre les deux conduit à sous-estimer la charge réelle.
+
+### RSU et stock-options
+
+Régime "traitements et salaires" à l'acquisition (RSU) ou à la levée (options). Fonctionnement :
+- **RSU** : le gain d'acquisition (valeur à la date de vesting) est imposé comme salaire + cotisations sociales. La plus-value ultérieure (valeur vesting → cession) relève du régime PFU ou barème.
+- **Stock-options** : le rabais excédentaire est imposé à l'acquisition ; le gain de levée selon des régimes spécifiques selon la date d'attribution (avant/après 2012, plans qualifiants ou non).
+- Contribution salariale spécifique sur les gains d'acquisition (taux à vérifier, plafond par plan).
+
+Piège fréquent : traiter le gain RSU comme une plus-value mobilière classique alors qu'il est d'abord soumis à cotisations sociales et à l'IR comme du salaire.
+
 ### Revenus du capital : PFU vs barème
 
 Les revenus mobiliers (dividendes, intérêts, plus-values mobilières) sont soumis soit au :
@@ -155,8 +178,51 @@ Le déficit foncier (charges > recettes) est imputable sur le revenu global dans
 
 ### LMNP (Location Meublée Non Professionnelle)
 Relève des BIC, pas des revenus fonciers. Deux régimes :
-- Micro-BIC : abattement forfaitaire sur recettes
+- Micro-BIC : abattement forfaitaire sur recettes (taux à vérifier — réforme 2025/2026 en cours, l'abattement applicable aux meublés de tourisme classés a été réduit)
 - Réel : amortissement du bien + mobilier + charges. L'amortissement crée souvent un résultat nul ou déficitaire sans impact sur le revenu global (déficit non imputable en LMNP).
+
+Vérifier impots.gouv.fr pour le taux d'abattement micro-BIC applicable selon le type de location (résidence principale du locataire, meublé de tourisme classé ou non).
+
+---
+
+## SCI (Société Civile Immobilière)
+
+### SCI à l'IR vs SCI à l'IS
+
+Deux régimes fiscaux radicalement différents :
+
+**SCI à l'IR (transparence fiscale — régime par défaut)**
+- Les revenus et charges remontent directement dans la déclaration des associés au prorata des parts
+- Revenus fonciers classiques (micro ou réel selon le cas)
+- Plus-values immobilières des particuliers à la cession des parts ou du bien
+
+**SCI à l'IS**
+- La SCI est un contribuable IS à part entière : taux réduit PME puis taux normal
+- Les loyers nets constituent le bénéfice imposable → IS
+- Amortissement du bien possible (levier important, réduit le bénéfice IS)
+- Les associés ne sont imposés que sur les dividendes distribués (PFU ou barème)
+- À la cession : plus-value calculée sur valeur nette comptable (après amortissements), souvent bien supérieure à la plus-value réelle → imposition forte. C'est le piège majeur de la SCI à l'IS.
+
+Choix IR vs IS : IR avantageux si détention longue (exonération PS/IR sur plus-value immo) ; IS avantageux si fort rendement locatif et réinvestissement des bénéfices dans la structure.
+
+### Démembrement de propriété
+
+Séparation entre usufruit (droit de jouissance et revenus) et nue-propriété (valeur du bien à terme).
+
+**Mécanismes clés :**
+- Valeurs d'usufruit et nue-propriété déterminées par un barème fiscal selon l'âge de l'usufruitier
+- Les revenus vont à l'usufruitier → déclarés dans sa catégorie fiscale
+- La nue-propriété ne génère pas de revenu → pas d'IR, pas d'IFI pour le nu-propriétaire
+- À l'extinction de l'usufruit (décès) : le nu-propriétaire récupère la pleine propriété sans droits supplémentaires
+
+**Usufruit temporaire :**
+- Donation de l'usufruit temporaire à un enfant ou une société : permet de transférer les revenus locatifs pendant une durée fixe
+- Valeur fiscale de l'usufruit temporaire : 23% de la valeur du bien par tranche de 10 ans (barème légal)
+- Droits de donation calculés sur cette valeur
+
+**Intérêt successoral :**
+- Donner la nue-propriété maintenant (à valeur réduite) + conserver l'usufruit = transmettre le bien à terme sans droits supplémentaires
+- Combinable avec abattements de donation (renouvelables tous les 15 ans)
 
 ---
 

@@ -112,6 +112,35 @@ Régime "traitements et salaires" à l'acquisition (RSU) ou à la levée (option
 
 Piège fréquent : traiter le gain RSU comme une plus-value mobilière classique alors qu'il est d'abord soumis à cotisations sociales et à l'IR comme du salaire.
 
+### Quotient pour revenus exceptionnels
+
+Distinct du quotient familial. Permet de lisser fiscalement un revenu ponctuel exceptionnel (vesting massif de RSU, prime exceptionnelle, indemnité de départ) en l'imposant comme s'il était perçu sur plusieurs années.
+
+Mécanisme : le revenu exceptionnel est divisé par un coefficient (généralement 4), ajouté au revenu ordinaire, l'impôt supplémentaire est multiplié par le même coefficient. Cela évite de basculer artificiellement dans une tranche marginale supérieure pour une année atypique.
+
+À mentionner systématiquement quand un utilisateur évoque un vesting RSU important, une cession d'entreprise, ou toute entrée de revenus très supérieure à l'ordinaire.
+
+### Prélèvement à la source (PAS)
+
+Mécanisme de collecte de l'IR en temps réel, pas d'imposition supplémentaire. Points souvent mal compris :
+
+- **Taux personnalisé** : calculé par la DGFiP sur la base des revenus N-2 puis N-1. Peut être individualisé au sein du couple.
+- **Taux neutre** : appliqué par défaut si le salarié ne communique pas son taux (correspond à un célibataire sans enfant) — peut entraîner un sous-prélèvement ou surprélèvement.
+- **Acomptes** : pour les revenus hors salaires (fonciers, BNC, dividendes), des acomptes mensuels ou trimestriels sont prélevés directement sur le compte.
+- **Décalage temporel** : le PAS collecte N, la régularisation se fait en N+1 lors de la déclaration. Si les revenus changent fortement (année de vesting, départ à la retraite, chômage), le taux peut être actualisé en cours d'année sur impots.gouv.fr.
+- **Impact cash-flow** : en cas de forte variation de revenus, anticiper la régularisation — un vesting RSU en fin d'année peut déclencher un solde à payer important en N+1.
+
+### Plafonnement global des niches fiscales
+
+Cap annuel sur l'ensemble des avantages fiscaux (réductions et crédits d'impôt) issus de dispositifs de défiscalisation. Au-delà du plafond, l'excédent est perdu — pas reportable.
+
+Mécanisme :
+- Certains dispositifs entrent dans le plafond (Pinel, FCPI/FIP, Malraux sous conditions, etc.)
+- D'autres en sont exclus (dons, emploi à domicile, garde d'enfant)
+- Le plafond s'applique après calcul de toutes les réductions, pas avant
+
+Piège classique : cumuler Pinel + FCPI + investissement outre-mer sans vérifier le plafond global → partie de l'avantage perdue. Toujours vérifier sur impots.gouv.fr quels dispositifs entrent dans le plafond et quel est le montant applicable.
+
 ### Revenus du capital : PFU vs barème
 
 Les revenus mobiliers (dividendes, intérêts, plus-values mobilières) sont soumis soit au :
@@ -281,6 +310,72 @@ Régime propre, hors succession civile. La fiscalité dépend de l'âge du sousc
 Exonération partielle (trois-quarts de la valeur) lors de la transmission d'une entreprise sous conditions d'engagement collectif et individuel de conservation. Mécanisme complexe mais très puissant pour les transmissions d'entreprises familiales.
 
 ---
+
+## PEA (Plan d'Épargne en Actions)
+
+Enveloppe fiscale pour investir en actions européennes avec une exonération d'IR sur les plus-values et dividendes après 5 ans (prélèvements sociaux restent dus).
+
+Mécanismes clés :
+- Avant 5 ans : tout retrait entraîne la clôture du plan et imposition des gains au PFU (ou barème)
+- Après 5 ans : retraits libres sans IR, seuls les PS s'appliquent sur les gains
+- Plafond de versements (vérifier sur impots.gouv.fr — PEA classique et PEA-PME ont des plafonds distincts)
+- Les dividendes et plus-values reinvestis dans le PEA ne sont pas imposés tant qu'ils restent dans l'enveloppe
+
+Comparaison PEA vs assurance-vie :
+- PEA : meilleur si investissement pur actions européennes, fiscalité plus légère après 5 ans (pas d'IR)
+- AV : plus flexible (fonds euros, unités de compte variées), abattement annuel sur les gains à la sortie, avantage successoral
+- Les deux sont complémentaires : PEA pour la performance actions, AV pour la diversification et la transmission
+
+## Assurance-vie : fiscalité des rachats
+
+La section succession couvre la transmission. La fiscalité des rachats (vivants) est distincte.
+
+Mécanisme des rachats partiels :
+- Un rachat partiel ne retire pas que des gains — il est proportionnel : (gains / valeur totale) × montant racheté = quote-part de gains imposable
+- Seule la quote-part de gains est imposée, pas le capital
+
+Régimes selon l'ancienneté du contrat et la date des versements :
+- **Contrats et versements avant le 27 sept. 2017** : taux dégressif selon ancienneté (prélèvement libératoire optionnel ou barème)
+- **Versements après le 27 sept. 2017** : PFU sur les gains des versements récents, avec abattement annuel après 8 ans de contrat (vérifier le montant sur impots.gouv.fr — distinct selon célibataire/couple)
+- **Règle des 8 ans** : l'abattement annuel sur les gains s'applique uniquement après 8 ans de détention du contrat, quelle que soit la date des versements
+
+Piège fréquent : croire qu'un rachat partiel sort d'abord le capital (non imposable) — la règle de proportionnalité s'applique toujours.
+
+## BSPCE (Bons de Souscription de Parts de Créateur d'Entreprise)
+
+Dispositif spécifique aux startups françaises éligibles. Distinct des RSU et stock-options classiques.
+
+Mécanisme :
+- Les BSPCE permettent de souscrire des actions à un prix fixé à l'émission (prix d'exercice)
+- Le gain de cession (différence entre prix de vente et prix d'exercice) est imposé à un taux forfaitaire si conditions remplies
+- Taux variable selon l'ancienneté dans la société (vérifier sur impots.gouv.fr — seuil d'ancienneté et taux applicables)
+- Si les conditions ne sont pas remplies (ancienneté insuffisante, société non éligible) : requalification en salaires, imposition + cotisations sociales
+
+Conditions d'éligibilité de la société (à vérifier) : SA/SAS française, immatriculée depuis moins de 15 ans, non cotée ou cotée sur compartiment PME, soumise à l'IS, non issue d'une restructuration.
+
+Différence clé vs RSU : les BSPCE ne génèrent pas de gain d'acquisition imposable comme salaire — le gain n'est réalisé et imposé qu'à la cession des actions.
+
+## Épargne salariale (PEE / PERCO / PERO)
+
+Enveloppes collectives distinctes du PER individuel.
+
+Mécanismes :
+- **Abondement employeur** : exonéré d'IR et de PS dans les limites légales (vérifier plafonds) — avantage majeur vs versement direct
+- **Dividendes réinvestis** dans le PEE : exonérés d'IR tant qu'ils restent dans l'enveloppe
+- **Sortie en capital** après 5 ans de blocage (PEE) : exonérée d'IR, seuls les PS s'appliquent sur les gains
+- **PERCO/PERO** : fonctionne comme un PER collectif — sortie en rente ou en capital à la retraite, même fiscalité que le PER individuel
+
+Différence clé vs PER individuel : l'abondement employeur n'existe pas sur le PER individuel. Le PEE est donc souvent à maximiser en premier si l'employeur abonde.
+
+## SCPI : spécificités fiscales
+
+Les SCPI sont fiscalement transparentes — les revenus remontent chez l'associé comme des revenus fonciers classiques.
+
+Nuances importantes :
+- **SCPI françaises** : revenus fonciers (micro ou réel selon le total des revenus fonciers du foyer), plus-values immobilières des particuliers à la cession de parts
+- **SCPI étrangères** : les revenus étrangers peuvent être imposés dans le pays de la SCPI selon les conventions fiscales — taux effectif d'IR en France ajusté (méthode du taux effectif ou crédit d'impôt selon convention). Les PS peuvent ne pas s'appliquer sur ces revenus (à vérifier selon pays)
+- **SCPI en assurance-vie** : fiscalité de l'enveloppe AV, pas des revenus fonciers — les loyers restent dans l'enveloppe et ne sont pas imposés annuellement
+- **SCPI via SCI à l'IS** : les loyers sont des produits IS, amortissement possible des parts — fiscalité radicalement différente
 
 ## Fiscalité crypto
 

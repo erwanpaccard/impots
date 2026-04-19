@@ -48,16 +48,18 @@
   },
 
   "pfu": {
-    "taux_global": 0.30,
+    "taux_global": 0.314,
     "detail_ir": 0.128,
-    "detail_ps": 0.172,
-    "note": "Vérifier LFI 2026 : possible hausse des prélèvements sociaux sur revenus de placements à partir du 1er janvier 2026"
+    "detail_ps": 0.186,
+    "source": "LFSS n°2025-1403 du 30 décembre 2025 — hausse PS de 17.2% à 18.6% au 1er janvier 2026",
+    "exceptions_taux_172": "AV et contrats de capitalisation anciens, CEL/PEL ouverts avant le 31/12/2017, PEP"
   },
 
   "prelevements_sociaux": {
-    "taux_revenus_capital_historique": 0.172,
+    "taux_revenus_capital": 0.186,
+    "taux_exceptions": 0.172,
     "dont_csg_deductible_si_bareme": 0.068,
-    "note": "La CSG déductible (6.8%) ne s'applique QUE si option barème progressif — zéro déductible sous PFU. Vérifier le taux applicable en 2026 sur impots.gouv.fr."
+    "note": "La CSG déductible (6.8%) ne s'applique QUE si option barème progressif — zéro déductible sous PFU. Fraction déductible à vérifier suite à la hausse LFSS 2026."
   },
 
   "per": {

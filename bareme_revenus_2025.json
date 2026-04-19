@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "revenus": 2025,
+    "declaration": 2026,
+    "lfi": "Loi n°2026-103 du 19 février 2026",
+    "indexation_bareme_ir": "+0.9%",
+    "pass_2025": 47100,
+    "pass_2026": 48060,
+    "sources": [
+      "https://bofip.impots.gouv.fr/bofip/14954-PGP.html/ACTU-2026-00022",
+      "https://www.service-public.gouv.fr/particuliers/actualites/A18045",
+      "https://www.urssaf.fr/accueil/actualites/plafond-annuel-securite-sociale.html"
+    ],
+    "a_mettre_a_jour": "Chaque année après la LFI (décembre-janvier). Remplacer ce fichier par bareme_revenus_XXXX.json."
+  },
+
+  "bareme_ir": {
+    "description": "Tranches par part de quotient familial (revenus 2025, déclaration 2026)",
+    "tranches": [
+      { "jusqu_a": 11600, "taux": 0.00 },
+      { "de": 11600, "a": 29579, "taux": 0.11 },
+      { "de": 29579, "a": 84577, "taux": 0.30 },
+      { "de": 84577, "a": 181917, "taux": 0.41 },
+      { "au_dela": 181917, "taux": 0.45 }
+    ]
+  },
+
+  "quotient_familial": {
+    "plafond_gain_par_demi_part": 1807,
+    "description": "Avantage fiscal maximum par demi-part supplémentaire liée aux enfants à charge"
+  },
+
+  "decote": {
+    "seuil_celibataire": 1982,
+    "seuil_couple": 3277,
+    "plafond_celibataire": 897,
+    "plafond_couple": 1483,
+    "formule_celibataire": "décote = 897 - (0.4525 × impôt_brut) si impôt_brut < 1982",
+    "formule_couple": "décote = 1483 - (0.4525 × impôt_brut) si impôt_brut < 3277",
+    "note": "La décote ne peut pas rendre l'impôt négatif. Source : BOI-IR-LIQ-20-20-30-20260407"
+  },
+
+  "abattement_salaires_10pct": {
+    "taux": 0.10,
+    "minimum": 509,
+    "maximum": 14555,
+    "description": "Abattement forfaitaire automatique sur traitements et salaires (case 1AJ). Attention : 1AJ = salaire net imposable du bulletin, AVANT cet abattement."
+  },
+
+  "pfu": {
+    "taux_global": 0.30,
+    "detail_ir": 0.128,
+    "detail_ps": 0.172,
+    "note": "Vérifier LFI 2026 : possible hausse des prélèvements sociaux sur revenus de placements à partir du 1er janvier 2026"
+  },
+
+  "prelevements_sociaux": {
+    "taux_revenus_capital_historique": 0.172,
+    "dont_csg_deductible_si_bareme": 0.068,
+    "note": "La CSG déductible (6.8%) ne s'applique QUE si option barème progressif — zéro déductible sous PFU. Vérifier le taux applicable en 2026 sur impots.gouv.fr."
+  },
+
+  "per": {
+    "description": "Plafond de déduction PER pour revenus 2025 (déclaration 2026)",
+    "calcul": "10% des revenus professionnels nets (salaires après abattement 10%, BNC, BIC)",
+    "plancher_euros": 4710,
+    "plancher_base": "10% × PASS 2025 (47 100 €) — garanti même sans revenus",
+    "plafond_absolu_euros": 37680,
+    "plafond_absolu_base": "10% × 8 × PASS 2025",
+    "report": "Plafonds non utilisés des 3 années précédentes mobilisables"
+  },
+
+  "ifi": {
+    "seuil_assujettissement": 1300000,
+    "bareme_commence_a": 800000,
+    "description": "IFI dû si patrimoine immobilier net > 1 300 000 € au 1er janvier ; le barème progressif s'applique sur la fraction au-delà de 800 000 €"
+  },
+
+  "succession_donation": {
+    "abattements_personnels_15_ans": {
+      "enfant": 100000,
+      "petit_enfant": 31865,
+      "arriere_petit_enfant": 5310,
+      "frere_soeur": 15932,
+      "neveu_niece": 7967,
+      "conjoint_succession": "Exonération totale (succession)",
+      "description": "Renouvelables tous les 15 ans entre le même donateur et le même bénéficiaire"
+    },
+    "don_exceptionnel_cash_2026": {
+      "plafond_par_operation": 100000,
+      "plafond_total_par_donateur": 300000,
+      "beneficiaires": "Enfant, petit-enfant, arrière-petit-enfant (ou neveu/nièce à défaut de descendants)",
+      "validite": "Jusqu'au 31 décembre 2026",
+      "note": "S'ajoute à l'abattement personnel renouvelable — dispositif temporaire à vérifier"
+    }
+  },
+
+  "micro_foncier": {
+    "seuil_recettes_brutes": 15000,
+    "abattement": 0.30,
+    "description": "Revenus fonciers bruts ≤ 15 000 € → micro-foncier éligible, abattement 30% automatique. Au-delà : régime réel obligatoire."
+  },
+
+  "micro_bic_lmnp": {
+    "description": "Loi Le Meur (nov. 2024), applicable aux revenus 2025. Distinction classé/non classé (et non résidence principale).",
+    "lmnp_longue_duree": {
+      "seuil": 77700,
+      "abattement": 0.50
+    },
+    "meuble_tourisme_classe": {
+      "seuil": 77700,
+      "abattement": 0.50
+    },
+    "meuble_tourisme_non_classe": {
+      "seuil": 15000,
+      "abattement": 0.30,
+      "note": "Abattement et seuil abaissés vs meublés classés — vérifier sur impots.gouv.fr si évolution LFI"
+    }
+  },
+
+  "pea": {
+    "plafond_classique": 150000,
+    "plafond_enfant_majeur_rattache": 20000,
+    "note_pea_pme": "Vérifier plafond PEA-PME et plafond combiné PEA+PEA-PME sur impots.gouv.fr",
+    "avant_5_ans": "Tout retrait entraîne clôture + imposition des gains au PFU",
+    "apres_5_ans": "Retraits libres, exonération IR, prélèvements sociaux dus sur les gains"
+  },
+
+  "assurance_vie_rachats": {
+    "abattement_annuel_apres_8_ans": {
+      "celibataire_veuf_divorce": 4600,
+      "couple_imposition_commune": 9200
+    },
+    "description": "Abattement sur la quote-part de gains dans le rachat (proportionnalité). S'applique uniquement après 8 ans de contrat.",
+    "rappel_proportionnalite": "Rachat partiel = quote-part gains = (gains totaux / valeur totale) × montant racheté"
+  },
+
+  "niches_fiscales": {
+    "plafond_global": 10000,
+    "description": "Cap annuel sur réductions et crédits issus de dispositifs de défiscalisation (Pinel, FCPI/FIP, etc.)",
+    "hors_plafond": "Dons, emploi à domicile, garde d'enfant, investissements outre-mer spécifiques — vérifier sur impots.gouv.fr"
+  }
+}

@@ -15,7 +15,7 @@ Skill Claude Code pour la fiscalité française des particuliers. Compatible ave
 
 ## Avec le serveur MCP irpp-mcp
 
-Si le serveur MCP [irpp-mcp](https://github.com/erwanpaccard/irpp-mcp) est actif, le skill l'utilise automatiquement pour les simulations IR — les calculs s'appuient alors sur le code source officiel DGFiP compilé via [Mlang (INRIA)](https://github.com/MLanguage/mlang).
+Si le serveur MCP [irpp-mcp](https://github.com/erwanpaccard/irpp-mcp) est actif, le skill l'utilise automatiquement pour les simulations IR — les calculs s'appuient alors sur le code source officiel DGFiP compilé via [Mlang (OCamlPro/DGFiP)](https://gitlab.adullact.net/dgfip/impots-nationaux-revenu-patrimoine-particuliers/Mlang).
 
 ## Installation
 

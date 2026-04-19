@@ -29,6 +29,11 @@ Le fichier `bareme_revenus_2025.json` contient les chiffres de la LFI n°2026-10
 
 Si le serveur MCP [irpp-mcp](https://github.com/erwanpaccard/irpp-mcp) est actif, le skill l'utilise automatiquement pour les simulations IR — les calculs s'appuient alors sur le code source officiel DGFiP compilé via [Mlang (OCamlPro/DGFiP)](https://gitlab.adullact.net/dgfip/impots-nationaux-revenu-patrimoine-particuliers/Mlang).
 
+Couverture :
+- ✅ Revenus 2023 (déclaration 2024) — compilé et fonctionnel
+- ❌ Revenus 2024 (déclaration 2025) — sources DGFiP incompatibles avec la version actuelle de Mlang
+- ❌ Revenus 2025 (déclaration 2026) — non disponible
+
 ## Installation
 
 ```bash

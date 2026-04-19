@@ -181,15 +181,9 @@ Relève des BIC, pas des revenus fonciers. Deux régimes :
 - Micro-BIC : abattement forfaitaire sur recettes (voir tableau ci-dessous — loi Le Meur nov. 2024, applicable revenus 2025)
 - Réel : amortissement du bien + mobilier + charges. L'amortissement crée souvent un résultat nul ou déficitaire sans impact sur le revenu global (déficit non imputable en LMNP).
 
-**Réforme micro-BIC 2025 (loi Le Meur + LFI 2024) :**
+**Réforme micro-BIC (loi Le Meur 2024, applicable revenus 2025) :** le régime micro-BIC pour les meublés de tourisme a été modifié. La distinction clé est désormais classé / non classé (et non résidence principale ou non) : les meublés non classés ont un plafond et un abattement inférieurs à ceux des classés et des LMNP longue durée. Vérifier les taux et plafonds exacts sur impots.gouv.fr — ils peuvent évoluer à chaque LFI.
 
-| Type de location | Plafond micro-BIC | Abattement |
-|-----------------|-------------------|------------|
-| Meublé de tourisme non classé (Airbnb, etc.) | 15 000 € | 30% |
-| Meublé de tourisme classé + chambres d'hôtes | 77 700 € | 50% |
-| Autres LMNP longue durée | 77 700 € | 50% |
-
-Au-delà des plafonds : régime réel obligatoire. La distinction classé/non classé prime sur le fait que le bien soit dans la résidence principale du propriétaire.
+Au-delà des plafonds : régime réel obligatoire.
 
 ---
 

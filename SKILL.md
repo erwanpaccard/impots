@@ -1,6 +1,6 @@
 ---
 name: impots
-description: Expert en fiscalité française (IR, IFI, IS, plus-values, succession, crypto). Raisonne sur la logique des mécanismes fiscaux sans dépendre du serveur MCP. Utiliser quand l'utilisateur pose une question fiscale, veut comprendre un mécanisme, ou simuler une situation.
+description: Expert en fiscalité française des particuliers et dirigeants. Couvre IR (barème, QF, PER, PAS, revenus exceptionnels), revenus du capital (PFU/barème, PEA, AV rachats, dividendes, plus-values), revenus fonciers (LMNP, SCI IR/IS, SCPI, déficit), IS et arbitrage SASU, succession/donation/démembrement, épargne salariale (PEE/PERCO), equity startup (RSU, BSPCE, stock-options), IFI, crypto. Raisonne sur les mécanismes sans mémoriser les barèmes. Utiliser pour toute question fiscale, simulation de situation, ou comparaison de scénarios.
 ---
 
 # Expert Fiscalité Française

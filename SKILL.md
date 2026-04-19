@@ -95,7 +95,7 @@ Couche distincte de l'IR, prélevée sur la quasi-totalité des revenus du capit
 
 Points clés :
 - S'applique sur dividendes, intérêts, plus-values mobilières et immobilières, revenus fonciers, revenus LMNP
-- La CSG est partiellement déductible du revenu imposable l'année suivante (fraction déductible à vérifier selon le régime)
+- La CSG est partiellement déductible du revenu imposable l'année suivante — uniquement si les revenus sont imposés au **barème progressif** (pas au PFU). Sous PFU, zéro CSG déductible. La fraction déductible est d'environ 6,8% sur le taux global (vérifier sur impots.gouv.fr) — elle s'impute en N+1 sur le RNI
 - Revenus du capital au PFU : prélèvements sociaux inclus dans le taux global
 - Revenus du capital au barème : prélèvements sociaux séparés de l'IR
 - Plus-values immobilières : exonération PS progressive (grille distincte de l'IR, durée différente)
@@ -117,6 +117,8 @@ Piège fréquent : traiter le gain RSU comme une plus-value mobilière classique
 Distinct du quotient familial. Permet de lisser fiscalement un revenu ponctuel exceptionnel (vesting massif de RSU, prime exceptionnelle, indemnité de départ) en l'imposant comme s'il était perçu sur plusieurs années.
 
 Mécanisme : le revenu exceptionnel est divisé par un coefficient (généralement 4), ajouté au revenu ordinaire, l'impôt supplémentaire est multiplié par le même coefficient. Cela évite de basculer artificiellement dans une tranche marginale supérieure pour une année atypique.
+
+Nuance clé : si le foyer est déjà au TMI maximum (tranche la plus haute), le mécanisme ne procure aucun avantage — le taux marginal est le même quelle que soit la division. Le bénéfice existe uniquement si le revenu exceptionnel ferait franchir une ou plusieurs tranches supplémentaires.
 
 À mentionner systématiquement quand un utilisateur évoque un vesting RSU important, une cession d'entreprise, ou toute entrée de revenus très supérieure à l'ordinaire.
 
@@ -204,6 +206,17 @@ Abattements pour durée de détention : réservés aux titres acquis avant 2018 
 
 ### Déficit foncier
 Le déficit foncier (charges > recettes) est imputable sur le revenu global dans la limite annuelle. Au-delà : reportable sur les revenus fonciers des 10 années suivantes. Exception : les intérêts d'emprunt ne sont imputables que sur les revenus fonciers, jamais sur le revenu global.
+
+### LMP vs LMNP
+
+Le passage de LMNP à LMP (Loueur Meublé Professionnel) intervient quand les recettes locatives dépassent un seuil ET représentent plus de 50% des revenus du foyer (vérifier conditions exactes sur impots.gouv.fr). Conséquences radicales :
+
+- **Déficits LMP** : imputables sur le revenu global (contrairement au LMNP où ils restent cantonnés aux BIC)
+- **Plus-values LMP** : régime des plus-values professionnelles avec exonérations spécifiques selon la durée d'activité (exonération totale possible après 5 ans sous conditions de recettes)
+- **Cotisations sociales** : le LMP entraîne des cotisations sociales sur les bénéfices (régime TNS)
+- **IFI** : les biens LMP peuvent être exonérés comme biens professionnels
+
+La bascule LMP/LMNP peut être involontaire (hausse de revenus locatifs ou baisse de revenus professionnels) — à surveiller.
 
 ### LMNP (Location Meublée Non Professionnelle)
 Relève des BIC, pas des revenus fonciers. Deux régimes :
@@ -303,11 +316,27 @@ Chaque héritier/donataire bénéficie d'un abattement renouvelable (délai de 1
 ### Barème progressif par lien de parenté
 Les droits sont calculés par tranche sur la part nette reçue après abattement. Les taux croissent avec le montant et sont plus élevés pour les bénéficiaires éloignés.
 
-### Assurance-vie
-Régime propre, hors succession civile. La fiscalité dépend de l'âge du souscripteur au moment des versements (avant/après un seuil d'âge) et du montant total. Ce mécanisme en fait un outil de transmission privilégié.
+### Assurance-vie (transmission)
+Régime propre, hors succession civile. La distinction clé est l'âge du souscripteur au moment des **versements** (pas au décès) :
+
+- **Versements avant 70 ans** : chaque bénéficiaire désigné bénéficie d'un abattement individuel sur les capitaux reçus (vérifier montant sur impots.gouv.fr). Au-delà : prélèvement forfaitaire spécifique (taux à vérifier), pas de droits de succession classiques.
+- **Versements après 70 ans** : abattement global unique partagé entre tous les bénéficiaires, surplus soumis aux droits de succession selon le lien de parenté. Seules les primes versées après 70 ans sont concernées, les gains restent exonérés.
+
+La distinction avant/après 70 ans change radicalement la stratégie : un contrat alimenté avant 70 ans permet une transmission hors succession avec abattement par tête, bien plus efficace qu'après.
 
 ### Pacte Dutreil
 Exonération partielle (trois-quarts de la valeur) lors de la transmission d'une entreprise sous conditions d'engagement collectif et individuel de conservation. Mécanisme complexe mais très puissant pour les transmissions d'entreprises familiales.
+
+---
+
+## Revenus de capitaux mobiliers (RCM)
+
+Intérêts d'obligations, crowdfunding immobilier, livrets fiscalisés, comptes à terme : soumis au PFU par défaut (IR + PS sur le montant brut), ou barème sur option globale.
+
+Points clés :
+- Pas d'abattement (contrairement aux dividendes au barème qui bénéficient de l'abattement 40%)
+- Crowdfunding immobilier : intérêts imposés comme RCM, pas comme revenus fonciers — même si le sous-jacent est immobilier
+- Livrets réglementés (Livret A, LDDS, LEP) : exonérés d'IR et de PS — à distinguer des livrets bancaires fiscalisés
 
 ---
 
@@ -326,6 +355,8 @@ Comparaison PEA vs assurance-vie :
 - AV : plus flexible (fonds euros, unités de compte variées), abattement annuel sur les gains à la sortie, avantage successoral
 - Les deux sont complémentaires : PEA pour la performance actions, AV pour la diversification et la transmission
 
+---
+
 ## Assurance-vie : fiscalité des rachats
 
 La section succession couvre la transmission. La fiscalité des rachats (vivants) est distincte.
@@ -341,6 +372,8 @@ Régimes selon l'ancienneté du contrat et la date des versements :
 
 Piège fréquent : croire qu'un rachat partiel sort d'abord le capital (non imposable) — la règle de proportionnalité s'applique toujours.
 
+---
+
 ## BSPCE (Bons de Souscription de Parts de Créateur d'Entreprise)
 
 Dispositif spécifique aux startups françaises éligibles. Distinct des RSU et stock-options classiques.
@@ -355,6 +388,8 @@ Conditions d'éligibilité de la société (à vérifier) : SA/SAS française, i
 
 Différence clé vs RSU : les BSPCE ne génèrent pas de gain d'acquisition imposable comme salaire — le gain n'est réalisé et imposé qu'à la cession des actions.
 
+---
+
 ## Épargne salariale (PEE / PERCO / PERO)
 
 Enveloppes collectives distinctes du PER individuel.
@@ -367,6 +402,8 @@ Mécanismes :
 
 Différence clé vs PER individuel : l'abondement employeur n'existe pas sur le PER individuel. Le PEE est donc souvent à maximiser en premier si l'employeur abonde.
 
+---
+
 ## SCPI : spécificités fiscales
 
 Les SCPI sont fiscalement transparentes — les revenus remontent chez l'associé comme des revenus fonciers classiques.
@@ -376,6 +413,8 @@ Nuances importantes :
 - **SCPI étrangères** : les revenus étrangers peuvent être imposés dans le pays de la SCPI selon les conventions fiscales — taux effectif d'IR en France ajusté (méthode du taux effectif ou crédit d'impôt selon convention). Les PS peuvent ne pas s'appliquer sur ces revenus (à vérifier selon pays)
 - **SCPI en assurance-vie** : fiscalité de l'enveloppe AV, pas des revenus fonciers — les loyers restent dans l'enveloppe et ne sont pas imposés annuellement
 - **SCPI via SCI à l'IS** : les loyers sont des produits IS, amortissement possible des parts — fiscalité radicalement différente
+
+---
 
 ## Fiscalité crypto
 
@@ -387,6 +426,17 @@ La plus-value de chaque cession = produit de cession − (valeur globale du port
 
 ### Taux
 PFU par défaut (ou barème sur option globale). Déclaration via formulaire spécifique (2086).
+
+---
+
+## Revenus de remplacement (ARE, ASP/CSP)
+
+Imposables à l'IR mais distincts des salaires :
+- Déclarés case 1AP (pas 1AJ) — pas d'abattement forfaitaire 10%
+- CSG prélevée à taux réduit à la source (taux inférieur au taux plein sur salaires — vérifier sur impots.gouv.fr)
+- La fraction de CSG prélevée à taux réduit n'est pas déductible du revenu imposable
+
+Piège fréquent : confondre case 1AJ (salaires) et 1AP (allocations chômage) — l'abattement 10% s'applique uniquement sur 1AJ. Déclarer une allocation chômage en 1AJ sous-estime le revenu imposable.
 
 ---
 

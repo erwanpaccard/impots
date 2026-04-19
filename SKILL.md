@@ -178,10 +178,18 @@ Le déficit foncier (charges > recettes) est imputable sur le revenu global dans
 
 ### LMNP (Location Meublée Non Professionnelle)
 Relève des BIC, pas des revenus fonciers. Deux régimes :
-- Micro-BIC : abattement forfaitaire sur recettes (taux à vérifier — réforme 2025/2026 en cours, l'abattement applicable aux meublés de tourisme classés a été réduit)
+- Micro-BIC : abattement forfaitaire sur recettes (voir tableau ci-dessous — loi Le Meur nov. 2024, applicable revenus 2025)
 - Réel : amortissement du bien + mobilier + charges. L'amortissement crée souvent un résultat nul ou déficitaire sans impact sur le revenu global (déficit non imputable en LMNP).
 
-Vérifier impots.gouv.fr pour le taux d'abattement micro-BIC applicable selon le type de location (résidence principale du locataire, meublé de tourisme classé ou non).
+**Réforme micro-BIC 2025 (loi Le Meur + LFI 2024) :**
+
+| Type de location | Plafond micro-BIC | Abattement |
+|-----------------|-------------------|------------|
+| Meublé de tourisme non classé (Airbnb, etc.) | 15 000 € | 30% |
+| Meublé de tourisme classé + chambres d'hôtes | 77 700 € | 50% |
+| Autres LMNP longue durée | 77 700 € | 50% |
+
+Au-delà des plafonds : régime réel obligatoire. La distinction classé/non classé prime sur le fait que le bien soit dans la résidence principale du propriétaire.
 
 ---
 

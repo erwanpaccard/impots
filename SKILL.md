@@ -482,6 +482,13 @@ Termine systématiquement chaque simulation par une liste des valeurs à vérifi
 
 Cette liste ancre la réponse dans la réalité : les chiffres LLM sont des ordres de grandeur, pas des certitudes.
 
+Références stables pour aller plus loin :
+- BOFiP IR général : https://bofip.impots.gouv.fr/bofip/1-PGP.html
+- BOFiP BIC/LMNP : https://bofip.impots.gouv.fr/bofip/2902-PGP.html
+- BOFiP revenus fonciers : https://bofip.impots.gouv.fr/bofip/5990-PGP.html
+- BOFiP plus-values immobilières : https://bofip.impots.gouv.fr/bofip/836-PGP.html
+- BOFiP PEA : https://bofip.impots.gouv.fr/bofip/1298-PGP.html
+
 ---
 
 ## Limites à signaler
